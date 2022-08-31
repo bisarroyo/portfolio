@@ -1,0 +1,31 @@
+.input-{
+  &text{
+    min-width: 250px;
+    background-color: transparent;
+    color: $light;
+    height: auto;
+    border: none;
+    border-bottom: 1px solid $light;
+    border-radius: 0px;
+    padding: 0.3rem 0.9rem;
+    font-size: 1.8rem;
+    transition: all 0.3s ease-in-out;
+
+    &:focus, &:hover {
+      outline: none;
+      border-color: $secondary;
+    }
+  
+    &::placeholder {
+      background-color: transparent;
+      color: $light;
+    }
+  }
+}
+
+.input-label {
+  padding-top: 20px;
+  font-size: 1.8rem;
+  color: $light;
+  font-weight: bold;
+}

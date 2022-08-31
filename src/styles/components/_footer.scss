@@ -1,0 +1,18 @@
+.footer-container {
+  width: 100%;
+  height: 190px;
+  border-top: 1px solid #ffffff55;
+
+  .footer-icons {
+    font-size: 4rem;
+    a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #ffffff55;
+    }
+  }
+  .footer-contain {
+    position: relative;
+    top: 35px;
+  }
+}

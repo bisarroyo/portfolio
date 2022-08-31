@@ -1,0 +1,13 @@
+@each $name, $size in $titles {
+  #{$name} {
+    font-size: $size;
+    text-align: center;
+  }
+};
+
+
+@each $name, $size in $text {
+  #{$name} {
+    font-size: $size;
+  }
+};

@@ -1,0 +1,39 @@
+// colors
+$primary : #1d1429;
+$secondary: #527083;
+$third: #41ead4;
+$light: #fdfffc;
+$dark: #000000;
+
+
+//breakpoint screen size
+$breakpoints: (
+  'xs': 1px,
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1200px,
+);
+
+//orientation
+$orientations: (
+    'portrait': portrait,
+    'landscape': landscape
+);
+
+//fonts
+$font-nunito:'Nunito', sans-serif;
+
+//font size
+$titles: (
+  'h1': 4.5rem,
+  'h2': 3.2rem,
+  'h3': 3rem,
+  'h4': 2.8rem,
+  'h5': 2.5rem,
+  'h6': 2rem,
+);
+
+$text: (
+  'p': 1.8rem,
+);

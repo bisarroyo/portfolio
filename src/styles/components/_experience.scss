@@ -1,0 +1,54 @@
+.experience {
+  margin-top: 50px;
+}
+
+.experience-container {
+  height: 360px;;
+  width: 100%;
+
+  .experience-undefined {
+    position: relative;
+    top: 69px;
+    right: 100px;
+    h6, p {
+      text-align: right;
+    }
+  }
+
+  .experience-titan {
+    position: relative;
+    top: 112px;
+    left: 100px;
+    h6, p {
+      text-align: left;
+    }
+  }
+
+  .experience-start {
+    position: relative;
+    top: 123px;
+    right: 100px;
+    h6, p {
+      text-align: right;
+    }
+  }
+
+  .diagram {
+    position: relative;
+    bottom: 180px;
+    .small {
+      width: 5px;
+      height: 10px;
+      background-color: #ffffff66;
+    }
+    .big {
+      width: 15px;
+      height: 15px;
+      background-color: $light;
+      border-radius: 50%;
+    }
+    div {
+      margin-top: 15px;
+    }
+  }
+}
