@@ -8,7 +8,12 @@
     a {
       margin: 0 10px;
       text-decoration: none;
-      color: #ffffff55;
+      color: #ffffff;
+      opacity: 0.5;
+      transition: 0.3s all ease;
+      &:hover {
+        opacity: 1;
+      }
     }
   }
   .footer-contain {

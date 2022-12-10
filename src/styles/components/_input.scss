@@ -1,33 +1,40 @@
-.input-text{
-  min-width: 300px;
-  background-color: transparent;
-  color: $light;
-  height: auto;
-  border: none;
-  border-bottom: 1px solid $light;
-  border-radius: 0px;
-  padding: 0.3rem 0.9rem;
-  font-size: 1.8rem;
-  transition: all 0.3s ease-in-out;
+.input-container {
+  position: relative;
 
-  &:focus, &:hover {
-    outline: none;
-    border-color: $secondary;
+  .error-message {
+    p {
+      text-align: end;
+      display: block;
+      height: 30px;
+      color: #fb0000;
+    }
+
   }
 
-  &::placeholder {
+  .input-text{
+    min-width: 300px;
     background-color: transparent;
     color: $light;
-    opacity: 0.6;
+    height: auto;
+    border: none;
+    border-bottom: 1px solid $light;
+    border-radius: 0px;
+    padding: 0.3rem 0.9rem;
+    font-size: 1.8rem;
+    transition: all 0.3s ease-in-out;
+  
+    &:focus, &:hover {
+      outline: none;
+      border-color: $secondary;
+    }
+  
+    &::placeholder {
+      background-color: transparent;
+      color: $light;
+      opacity: 0.6;
+    }
+    &.error {
+      border-bottom: 1px solid #fb0000 !important;
+    }
   }
-  &.error {
-    border-bottom: 1px solid #fb0000 !important;
-  }
-}
-
-.input-label {
-  padding-top: 20px;
-  font-size: 1.8rem;
-  color: $light;
-  font-weight: bold;
 }

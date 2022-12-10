@@ -7,13 +7,10 @@ import Loader from '../components/Loader'
 
 // import components
 import Button from '../components/Button'
-import Input from '../components/Input'
-import TextArea from '../components/TextArea'
 
 const Contact = () => {
   const form = useRef()
-  // const refInputOne = React.createRef()
-  const { register, handleSubmit, formState: { errors } } = useForm()
+  const { register, handleSubmit, formState: { errors }, reset } = useForm()
 
   const [contactData, setContactData] = useState({
     button: 'Let´s go!',
@@ -33,6 +30,11 @@ const Contact = () => {
           button: 'Message Sent!',
           loading: false
         })
+        reset({
+          fullName: '',
+          email: '',
+          message: ''
+        })
       }, (err) => {
         setContactData({
           ...contactData,
@@ -46,31 +48,34 @@ const Contact = () => {
       <div className='contact-container flex-column'>
         <h2>Talk about projects!</h2>
         <form className='flex-column' ref={form} onSubmit={handleSubmit(sendEmail)}>
-          <Input
-            className='input-text'
-            type='text'
-            label='Name'
-            placeholder='Name'
-            // ref={refInputOne}
-            {...register('fullName', { required: true })}
-          />
-          {errors.fullName && <span>Name is required</span>}
-          <Input
-            className='input-text'
-            type='email'
-            label='E-mail'
-            placeholder='you@mail.com'
-            {...register('email', { required: true })}
-          />
-          {errors.email && <span>Email is required</span>}
-          <TextArea
-            className='input-text'
-            label='Message'
-            type='text'
-            placeholder='Please write your message'
-            {...register('message', { required: true })}
-          />
-          {errors.message && <span>Message is required</span>}
+          <div className='input-container'>
+            <input
+              className={`input-text ${errors.fullName && 'error'}`}
+              type='text'
+              placeholder='Name'
+              {...register('fullName', { required: true })}
+            />
+            <div className='error-message'><p>{errors.fullName && 'Please write your name'}</p></div>
+          </div>
+          <div className='input-container'>
+            <input
+              className={`input-text ${errors.email && 'error'}`}
+              type='email'
+              placeholder='you@mail.com'
+              {...register('email', { required: true })}
+            />
+            <div className='error-message'><p>{errors.email && 'Please write your email'}</p></div>
+          </div>
+          <div className='input-container'>
+            <textarea
+              className={`input-text ${errors.message && 'error'}`}
+              rows='3'
+              type='text'
+              placeholder='Please write your message'
+              {...register('message', { required: true })}
+            />
+            <div className='error-message'><p>{errors.message && 'Please write your message'}</p></div>
+          </div>
           <div className='flex-column'>
             <Button
               className='btn-secondary'
