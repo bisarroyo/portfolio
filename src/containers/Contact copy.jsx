@@ -11,9 +11,8 @@ import Loader from '../components/Loader'
 import Button from '../components/Button'
 
 const schema = yup.object().shape({
-  fullName: yup.string().required('Please write your name').min(2, 'Write almost 2 words'),
-  email: yup.string().email('Please write a valid email').required('Please write an email'),
-  message: yup.string().required('Please write a message')
+  fullName: yup.string().required(),
+  email: yup.string().email()
 })
 
 const Contact = () => {
@@ -34,24 +33,25 @@ const Contact = () => {
       ...contactData,
       loading: true
     })
-    emailjs.sendForm('service_5qlkffn', 'template_4do2mlk', form.current, 'user_6jm6KpxJVyCrP322EtqhO')
-      .then((result) => {
-        setContactData({
-          button: 'Message Sent!',
-          loading: false
-        })
-        reset({
-          fullName: '',
-          email: '',
-          message: ''
-        })
-      }, (err) => {
-        setContactData({
-          ...contactData,
-          error: 'Message not sent, please try again'
-        })
-        console.log(err)
-      })
+    console.log('send')
+    // emailjs.sendForm('service_5qlkffn', 'template_4do2mlk', form.current, 'user_6jm6KpxJVyCrP322EtqhO')
+    //   .then((result) => {
+    //     setContactData({
+    //       button: 'Message Sent!',
+    //       loading: false
+    //     })
+    //     reset({
+    //       fullName: '',
+    //       email: '',
+    //       message: ''
+    //     })
+    //   }, (err) => {
+    //     setContactData({
+    //       ...contactData,
+    //       error: 'Message not sent, please try again'
+    //     })
+    //     console.log(err)
+    //   })
   }
   return (
     <>
@@ -65,16 +65,16 @@ const Contact = () => {
               placeholder='Name'
               {...register('fullName', { required: true })}
             />
-            <div className='error-message'><p>{errors.fullName?.message}</p></div>
+            <div className='error-message'><p>{errors.fullName && 'Please write your name'}</p></div>
           </div>
           <div className='input-container'>
             <input
               className={`input-text ${errors.email && 'error'}`}
-              type='text'
+              type='email'
               placeholder='you@mail.com'
               {...register('email', { required: true })}
             />
-            <div className='error-message'><p>{errors.email?.message}</p></div>
+            <div className='error-message'><p>{errors.email && 'Please write your email'}</p></div>
           </div>
           <div className='input-container'>
             <textarea
@@ -84,7 +84,7 @@ const Contact = () => {
               placeholder='Please write your message'
               {...register('message', { required: true })}
             />
-            <div className='error-message'><p>{errors.message?.message}</p></div>
+            <div className='error-message'><p>{errors.message && 'Please write your message'}</p></div>
           </div>
           <div className='flex-column'>
             <Button

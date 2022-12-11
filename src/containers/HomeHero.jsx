@@ -10,8 +10,8 @@ const HomeHero = () => {
       <h2>Front-end developer</h2>
       <motion.div
         className='home-image'
-        initial={{ scale: 0.8 }}
-        animate={{ scale: 1 }}
+        initial={{ translateY: 15, opacity: 0.5 }}
+        animate={{ translateY: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
         <img src={bismark} alt='Bismark Arroyo photo' />

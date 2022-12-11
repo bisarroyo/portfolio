@@ -10,6 +10,12 @@
     position: relative;
     top: 69px;
     right: 100px;
+    transition: 2s all ease;
+    opacity: 0;
+
+    &.show {
+      opacity: 1;
+    }
     h6, p {
       text-align: right;
     }
@@ -19,6 +25,12 @@
     position: relative;
     top: 112px;
     left: 100px;
+    transition: 2s all ease;
+    opacity: 0;
+
+    &.show {
+      opacity: 1;
+    }
     h6, p {
       text-align: left;
     }
@@ -28,6 +40,12 @@
     position: relative;
     top: 123px;
     right: 100px;
+    transition: 2s all ease;
+    opacity: 0;
+
+    &.show {
+      opacity: 1;
+    }
     h6, p {
       text-align: right;
     }

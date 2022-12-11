@@ -2,13 +2,16 @@
   position: relative;
 
   .error-message {
+    transition: 1s all ease;
+    
+
     p {
       text-align: end;
       display: block;
       height: 30px;
       color: #fb0000;
+      opacity: 1;
     }
-
   }
 
   .input-text{
