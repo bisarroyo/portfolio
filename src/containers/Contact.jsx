@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react'
+import { useInView } from 'framer-motion'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 import emailjs from '@emailjs/browser'
@@ -53,9 +54,19 @@ const Contact = () => {
         console.log(err)
       })
   }
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true })
   return (
     <>
-      <div className='contact-container flex-column'>
+      <div
+        className='contact-container flex-column'
+        ref={ref}
+        style={{
+          transform: isInView ? 'none' : 'translateY(50px)',
+          opacity: isInView ? 1 : 0,
+          transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s'
+        }}
+      >
         <h2>Talk about projects!</h2>
         <form className='flex-column' ref={form} onSubmit={handleSubmit(sendEmail)}>
           <div className='input-container'>
