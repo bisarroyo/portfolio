@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import bismark from '../assets/img/bismark.jpg'
+import bismark from '../assets/img/bismark.webp'
 import { IoIosArrowDown } from 'react-icons/io'
 
 const HomeHero = () => {
