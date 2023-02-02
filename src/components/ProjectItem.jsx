@@ -13,7 +13,7 @@ const ProjectItem = ({ projects }) => {
           </div>
           <div className='project-card'>
             <div className='project-title'>
-              <h6>{project.name}</h6>
+              <h3>{project.name}</h3>
             </div>
             <div className='project-content'>
               <p>{project.description}</p>
@@ -24,12 +24,12 @@ const ProjectItem = ({ projects }) => {
               </div>
               <div className='project-links flex-row'>
                 <div className='project-link-page'>
-                  <a href={project.link} target='_blank' rel='noreferrer'>
+                  <a href={project.link} target='_blank' rel='noreferrer' aria-label={`Website link for ${project.name}`}>
                     <AiOutlineLink />
                   </a>
                 </div>
                 <div className='project-link-github'>
-                  <a href={project.gitUrl} target='_blank' rel='noreferrer'>
+                  <a href={project.gitUrl} target='_blank' rel='noreferrer' aria-label={`Git url repositorie for ${project.name}`}>
                     <AiFillGithub />
                   </a>
                 </div>
