@@ -1,8 +1,8 @@
-import surely from '../assets/img/projects/surely-naturals.jpg'
-import space from '../assets/img/projects/space-tourism.jpg'
-import rockPaperScissors from '../assets/img/projects/rockPaperScissors.png'
-import google from '../assets/img/projects/google.png'
-import tictactoe from '../assets/img/projects/tictactoe.png'
+import surely from '../assets/img/projects/surely-naturals.webp'
+import space from '../assets/img/projects/space-tourism.webp'
+import rockPaperScissors from '../assets/img/projects/rockPaperScissors.webp'
+import google from '../assets/img/projects/google.webp'
+import tictactoe from '../assets/img/projects/tictactoe.webp'
 
 const projects = [
   {
