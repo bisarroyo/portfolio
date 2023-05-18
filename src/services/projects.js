@@ -1,4 +1,4 @@
-import surely from '../assets/img/projects/surely-naturals.webp'
+import todo from '../assets/img/projects/to-do-app.webp'
 import space from '../assets/img/projects/space-tourism.webp'
 import rockPaperScissors from '../assets/img/projects/rockPaperScissors.webp'
 import google from '../assets/img/projects/google.webp'
@@ -7,12 +7,12 @@ import tictactoe from '../assets/img/projects/tictactoe.webp'
 const projects = [
   {
     id: 1,
-    name: 'Surely Naturals',
-    description: 'Website build in wordpress and SCSS, © Titan Digital.',
-    link: 'https://surely-naturals.com/',
-    gitUrl: 'https://surely-naturals.com/',
-    tags: 'Wordpress SCSS PHP',
-    image: surely
+    name: 'To Do App',
+    description: 'To do app build with react and redux to handle global state.',
+    link: 'https://to-do.bismarkarroyo.com/',
+    gitUrl: 'https://github.com/bisarroyo/todo-app',
+    tags: 'React Styled-Companents Redux',
+    image: todo
   },
   {
     id: 2,
@@ -26,7 +26,8 @@ const projects = [
   {
     id: 3,
     name: 'Rock Paper & Scissors Game',
-    description: 'Rock, paper and siccsors game build only with Vanila JavaScript.',
+    description:
+      'Rock, paper and siccsors game build only with Vanila JavaScript.',
     link: 'https://rock-paper-scissors.bismarkarroyo.com/',
     gitUrl: 'https://github.com/bisarroyo/rock-paper-scissors',
     tags: 'HTML CSS JAVASCRIPT',
@@ -35,7 +36,8 @@ const projects = [
   {
     id: 4,
     name: 'Google clon',
-    description: 'Site build only with HTML and CSS, just a copy of google search page.',
+    description:
+      'Site build only with HTML and CSS, just a copy of google search page.',
     link: 'https://google.bismarkarroyo.com/',
     gitUrl: 'https://github.com/bisarroyo/google-clon',
     tags: 'HTML CSS',
@@ -44,7 +46,8 @@ const projects = [
   {
     id: 5,
     name: 'TIC-TAC-TOE Game',
-    description: 'Clasic game Tic-Tac-Toe for two players, build with React js.',
+    description:
+      'Clasic game Tic-Tac-Toe for two players, build with React js.',
     link: 'https://tic-tac-toe.bismarkarroyo.com/',
     gitUrl: 'https://github.com/bisarroyo/tic-tac-toe',
     tags: 'HTML CSS',
