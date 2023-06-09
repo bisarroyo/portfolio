@@ -3,6 +3,7 @@ import space from '../assets/img/projects/space-tourism.webp'
 import rockPaperScissors from '../assets/img/projects/rockPaperScissors.webp'
 import google from '../assets/img/projects/google.webp'
 import tictactoe from '../assets/img/projects/tictactoe.webp'
+import password from '../assets/img/projects/password.webp'
 
 const projects = [
   {
@@ -52,6 +53,15 @@ const projects = [
     gitUrl: 'https://github.com/bisarroyo/tic-tac-toe',
     tags: 'HTML CSS',
     image: tictactoe
+  },
+  {
+    id: 6,
+    name: 'Password Generator',
+    description: 'Password generator with multiple options to generate.',
+    link: 'https://password.bismark.dev/',
+    gitUrl: 'https://github.com/bisarroyo/password-generator',
+    tags: 'HTML CSS JAVASCRIPT',
+    image: password
   }
 ]
 
