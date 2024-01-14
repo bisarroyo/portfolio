@@ -35,16 +35,6 @@ const projects = [
     image: rockPaperScissors
   },
   {
-    id: 4,
-    name: 'Google clon',
-    description:
-      'Site build only with HTML and CSS, just a copy of google search page.',
-    link: 'https://google.bismarkarroyo.com/',
-    gitUrl: 'https://github.com/bisarroyo/google-clon',
-    tags: 'HTML CSS',
-    image: google
-  },
-  {
     id: 5,
     name: 'TIC-TAC-TOE Game',
     description:
