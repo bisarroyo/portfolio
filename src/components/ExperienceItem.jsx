@@ -12,16 +12,25 @@ const ExperienceItem = () => {
   })
   return (
     <div className='experience-container'>
-      <div className={`experience-undefined ${isIntersectingOne && 'show'}`} ref={refOne}>
+      <div
+        className={`experience-undefined ${isIntersectingOne && 'show'}`}
+        ref={refOne}
+      >
         <p>Next experience?</p>
         <p>Comming soon</p>
       </div>
-      <div className={`experience-titan ${isIntersectingTwo && 'show'}`} ref={refTwo}>
+      <div
+        className={`experience-titan ${isIntersectingTwo && 'show'}`}
+        ref={refTwo}
+      >
         <p>Titan Digital</p>
         <p>Jun, 2022</p>
-        <p>Web developer</p>
+        <p>Web developer.</p>
       </div>
-      <div className={`experience-start ${isIntersectingThree && 'show'}`} ref={refThree}>
+      <div
+        className={`experience-start ${isIntersectingThree && 'show'}`}
+        ref={refThree}
+      >
         <p>Start in programing</p>
         <p>Dec, 2020</p>
       </div>
