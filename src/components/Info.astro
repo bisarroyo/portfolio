@@ -1,9 +1,47 @@
 ---
-
+const menu = [
+  {
+    title: 'About',
+    href: '/about',
+  },
+  {
+    title: 'Projects',
+    href: '/projects',
+  },
+  {
+    title: 'Contact',
+    href: '/contact',
+  },
+];
 ---
 
 <section class="info">
+  
   <div class="photo">
-    <img src="" alt="Bismark photo" />
+    <img src="/profile.jpg" alt="Bismark photo" />
   </div>
+  <nav>
+    <ul>
+      {
+        menu.map((item) => (
+          <li>
+            <a href={item.href}>{item.title}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+  <div class="info-links">
+    <a href="https://github.com/bismark" target="_blank">
+      <img src="/github.svg" alt="Github" />
+    </a>
+    <a href="https://www.linkedin.com/in/bismark/" target="_blank">
+      <img src="/linkedin.svg" alt="Linkedin" />
+    </a>
+  </div>
+
 </section>
+
+<style>
+
+</style>

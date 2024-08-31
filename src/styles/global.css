@@ -1,17 +1,20 @@
 :root {
-  --accent-color: #ff3e00;
-  --accent-color-dark: #ff3e00;
-  --accent-color-light: #ff3e00;
+  --icon-color: #000000;
+  --text-color: #000000;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --accent-color: #ff3e00;
     --background-color: #1e1e1e;
     --text-color: #ffffff;
+    --icon-color: #ffffff;
   }
 }
 .body {
   background-color: var(--background-color);
+  color: var(--text-color);
+}
+a {
+  text-decoration: none;
   color: var(--text-color);
 }
