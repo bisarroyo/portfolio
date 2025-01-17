@@ -1,22 +1,22 @@
 ---
 const projects = [
   {
-    title: "E-commerce Platform",
-    description: "A full-stack e-commerce solution with React, Node.js, and MongoDB.",
-    image: "/placeholder.svg?height=200&width=300",
-    link: "#"
+    title: "Ticket Saas Platform",
+    description: "A full-stack app for create events and manage tickets, built with Next js and Supabase.",
+    image: "/projects/ticket.webp",
+    link: "https://github.com/bisarroyo/ticket-saas"
   },
   {
-    title: "Weather App",
-    description: "A real-time weather application using React and OpenWeatherMap API.",
-    image: "/placeholder.svg?height=200&width=300",
-    link: "#"
+    title: "Paint JS",
+    description: "An app using vanilla javascript as a copy of the old version of paint.",
+    image: "/projects/paint.webp",
+    link: "https://github.com/bisarroyo/paint-js"
   },
   {
-    title: "Task Management System",
-    description: "A collaborative task management tool built with React and Firebase.",
-    image: "/placeholder.svg?height=200&width=300",
-    link: "#"
+    title: "Node API",
+    description: "A backend app for handle user logins and user info with tasks.",
+    image: "/projects/node.webp",
+    link: "https://github.com/bisarroyo/node-crud"
   }
 ];
 ---
@@ -27,7 +27,7 @@ const projects = [
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {projects.map((project) => (
         <div class="bg-white rounded-lg shadow-md overflow-hidden">
-          <img src={project.image || "/placeholder.svg"} alt={project.title} class="w-full h-48 object-cover" />
+          <img src={project.image || "/placeholder.svg"} alt={project.title} class="w-full h-48 object-cover hover:scale-105 transition-all transition-500ms" />
           <div class="p-6">
             <h3 class="text-xl font-semibold mb-2">{project.title}</h3>
             <p class="text-gray-600 mb-4">{project.description}</p>
@@ -36,6 +36,7 @@ const projects = [
         </div>
       ))}
     </div>
+    <p>More projects on my <a href="https://github.com/bisarroyo?tab=repositories" target="_blank" class="underline mt-5">Github Page</a></p>
   </div>
 </section>
 
