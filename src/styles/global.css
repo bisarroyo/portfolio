@@ -1,1 +1,10 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+:root {
+  --color-primary: #fff;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #fff;
+  }
+}
