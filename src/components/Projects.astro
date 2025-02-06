@@ -1,0 +1,25 @@
+---
+import ProjectsItem from './ProjectsItem.astro'
+
+const projects = [
+  {
+    title: 'Project 1',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+    image: '/docs/images/blog/image-1.jpg'
+  },
+  {
+    title: 'Project 2',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+    image: '/docs/images/blog/image-2.jpg'
+  },
+  {
+    title: 'Project 3',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+    image: '/docs/images/blog/image-3.jpg'
+  }
+]
+---
+
+<div>
+  {projects.map((project) => <ProjectsItem {...project} />)}
+</div>
