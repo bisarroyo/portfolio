@@ -1,38 +1,57 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../layouts/Layout.astro'
 
-import About from '@components/About.astro';
-import Contact from '@components/Contact.astro';
-import Experience from '@components/Experience.astro';
-import Footer from '@components/Footer.astro';
-import Hero from '@components/Hero.astro';
-import Projects from '@components/Projects.astro';
+import About from '@components/About.astro'
+import Contact from '@components/Contact.astro'
+import Experience from '@components/Experience.astro'
 
+import Hero from '@components/Hero.astro'
+import Projects from '@components/Projects.astro'
+import Section from '@components/Section.astro'
+import TitleSection from '@components/TitleSection.astro'
 
+// icons
+import ExperienceIcon from 'src/icons/ExperienceIcon.astro'
+import ProjectsIcon from 'src/icons/ProjectsIcon.astro'
+import AboutIcon from 'src/icons/AboutIcon.astro'
+import ContactIcon from 'src/icons/ContactIcon.astro'
 ---
 
-<Layout>
-	
-	<div class="container">
-		<Hero />
-		<Experience />
-		<Projects />
-		<About />
-		<Contact />
-		<Footer />
-	</div>
+<Layout
+  title='Bismark Arroyo - Desarrollador y Progamador web con 3 años de experiencia'
+  description='Bismark Arroyo - Desarrollador y Progamador web con 3 años de experiencia'
+>
+  <div class='mx-auto flex flex-col space-y-24'>
+    <Section class='mt-24'>
+      <Hero />
+    </Section>
+    <Section>
+      <TitleSection>
+        <ExperienceIcon />
+        Experience
+      </TitleSection>
+      <Experience />
+    </Section>
+    <Section>
+      <TitleSection>
+        <ProjectsIcon />
+        Projects
+      </TitleSection>
+      <Projects />
+    </Section>
+    <Section>
+      <TitleSection>
+        <AboutIcon />
+        About
+      </TitleSection>
+      <About />
+    </Section>
+    <Section>
+      <TitleSection>
+        <ContactIcon />
+        Contact
+      </TitleSection>
+      <Contact />
+    </Section>
+  </div>
 </Layout>
-
-<style>
-	
-	.container {
-		max-width: 1200px;
-		color: #fff;
-		display: flex;
-		flex-direction: column;
-
-
-		margin: 100px auto;
-		gap: 80px;
-	}
-</style>
