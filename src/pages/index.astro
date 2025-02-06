@@ -1,19 +1,25 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.astro';
-import About from '../components/About.astro';
-import Projects from '../components/Projects.astro';
-import Experience from '../components/Experience.astro';
-import Contact from '../components/Contact.astro';
+
+import Hero from '@components/Hero.astro';
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout title="Bismark Arroyo - Web Developer Portfolio">
-	<main class="min-h-screen bg-gray-100">
+<Layout>
+	
+	<div class="container">
 		<Hero />
-		<About />
-		<Projects />
-		<Experience />
-		<Contact />
-	</main>
+	</div>
 </Layout>
 
+<style>
+	
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		height: 100dvh;
+		color: #fff;
+	}
+</style>
