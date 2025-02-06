@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "portfolio",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -9,23 +9,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/react": "^4.1.5",
-    "@astrojs/tailwind": "^5.1.4",
-    "@emailjs/browser": "^4.4.1",
-    "@hookform/resolvers": "^3.10.0",
-    "@types/react": "^19.0.7",
-    "@types/react-dom": "^19.0.3",
-    "astro": "^5.1.7",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-hook-form": "^7.54.2",
-    "tailwindcss": "^3.4.17",
-    "yup": "^1.6.1"
-  },
-  "eslintConfig": {
-    "extends": "standard"
-  },
-  "devDependencies": {
-    "standard": "^17.1.2"
+    "@astrojs/ts-plugin": "^1.10.4",
+    "@fontsource/poppins": "^5.1.1",
+    "@tailwindcss/vite": "^4.0.3",
+    "astro": "^5.2.5",
+    "tailwindcss": "^4.0.3"
   }
 }
