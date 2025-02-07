@@ -1,55 +1,56 @@
 ---
 
 ---
+
 <header>
-    <nav class="nav">
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about/">About</a></li>
-            <li><a href="/blog/">Blog</a></li>
-        </ul>
-    </nav>
+  <nav class='nav'>
+    <ul>
+      <li><a href='#experience'>Experience</a></li>
+      <li><a href='#projects'>Projects</a></li>
+      <li><a href='#about'>About</a></li>
+      <li><a href='#contact'>Contact</a></li>
+    </ul>
+  </nav>
 </header>
 <style>
-    header {
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+  }
+  ul {
+    display: flex;
+    gap: 20px;
+    padding: 10px 25px;
+    margin: 10px 0;
+    border-radius: 99999999px;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    li {
+      list-style: none;
+      a {
+        text-decoration: none;
+        color: #fff;
+        transition: color 0.3s ease-in-out;
         display: flex;
-        justify-content: center;
         align-items: center;
-        position: sticky;
-        top: 0;
-        z-index: 100;
-    }
-    .nav {
-        display: flex;
         justify-content: center;
-        align-items: center;
-        max-width: 1200px;
-        
-    }
-    ul {
-        display: flex;
-        gap: 20px;
-        padding: 10px 25px;
-        margin: 10px 0;
-        border-radius: 99999999px;
-        background: rgba(255, 255, 255, 0.08);
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(14px);
-        -webkit-backdrop-filter: blur(14px);
-        li {
-            list-style: none;
-            a {
-                text-decoration: none;
-                color: #fff;
-                transition: color 0.3s ease-in-out;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 5px;
-                &:hover {
-                    color: blue;
-                }
-            }
+        gap: 5px;
+        &:hover {
+          color: blue;
         }
+      }
     }
+  }
 </style>
