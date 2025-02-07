@@ -1,24 +1,98 @@
 ---
-const { title, description, image } = Astro.props
+interface Props {
+  title: string
+  description: string
+  image: string
+  github: string
+  link: string
+  tags: string[]
+}
+
+const { title, description, image, github, link, tags } = Astro.props
+
+import GithubIcon from '@icons/GithubIcon.astro'
+import LinkIcon from '@icons/LinkIcon.astro'
+import NextJS from '@icons/NextJS.astro'
+import Tailwind from '@icons/Tailwind.astro'
+
+const TAGS: { [key: string]: { name: string; class: string; icon: any } } = {
+  NEXT: {
+    name: 'Next.js',
+    class: 'bg-black text-white',
+    icon: NextJS
+  },
+  TAILWIND: {
+    name: 'Tailwind CSS',
+    class: 'bg-[#003159] text-white',
+    icon: Tailwind
+  }
+}
 ---
 
-<a
-  href='#'
-  class='flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700'
->
+<div class='w-full grid grid-cols-[1fr_2fr] gap-x-12'>
   <img
-    class='object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg'
-    src='/docs/images/blog/image-4.jpg'
+    class='object-cover w-full aspect-[16/9] rounded-lg'
+    src={image}
     alt=''
   />
   <div class='flex flex-col justify-between p-4 leading-normal'>
     <h5
-      class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'
+      class='mb-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white'
     >
       {title}
     </h5>
-    <p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+    <div>
+      <ul class='flex flex-row mb-2 gap-x-2'>
+        {
+          tags.map((tag) => {
+            if (!TAGS[tag]) return null
+            const Icon = TAGS[tag].icon
+            return (
+              <li>
+                <span
+                  class:list={[
+                    'flex gap-x-2 rounded-full text-xs py-1 px-2',
+                    TAGS[tag].class
+                  ]}
+                >
+                  {Icon && <Icon class='size-4' />}
+                  {TAGS[tag].name}
+                </span>
+              </li>
+            )
+          })
+        }
+      </ul>
+    </div>
+    <p class='mb-3 font-normal text-gray-700 dark:text-gray-400 text-lg'>
       {description}
     </p>
+    <div>
+      {
+        github && (
+          <a
+            href={github}
+            target='_blank'
+            rel='noopener noreferrer'
+            class='text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800 inline-flex items-center gap-x-2 transition-all duration-200 ease-in-out'
+          >
+            <GithubIcon /> Code
+          </a>
+        )
+      }
+      {
+        link && (
+          <a
+            href={link}
+            target='_blank'
+            rel='noopener noreferrer'
+            class='text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800 inline-flex items-center gap-x-2 transition-all duration-200 ease-in-out'
+          >
+            <LinkIcon />
+            Demo
+          </a>
+        )
+      }
+    </div>
   </div>
-</a>
+</div>

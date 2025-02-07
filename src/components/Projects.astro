@@ -1,25 +1,46 @@
 ---
 import ProjectsItem from './ProjectsItem.astro'
 
-const projects = [
+interface Project {
+  title: string
+  description: string
+  image: string
+  github: string
+  link: string
+  tags: string[]
+}
+
+const PROJECTS: Project[] = [
   {
     title: 'Project 1',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-    image: '/docs/images/blog/image-1.jpg'
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+    image: '/projects/project.webp',
+    github: 'git',
+    link: 'dem',
+    tags: ['NEXT', 'TAILWIND']
   },
   {
     title: 'Project 2',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-    image: '/docs/images/blog/image-2.jpg'
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+    image: '/projects/project.webp',
+    github: 'git',
+    link: 'dem',
+    tags: ['NEXT', 'TAILWIND']
   },
   {
     title: 'Project 3',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-    image: '/docs/images/blog/image-3.jpg'
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+    image: '/projects/project.webp',
+    github: 'git',
+    link: 'dem',
+    tags: ['NEXT', 'TAILWIND']
   }
 ]
 ---
 
-<div>
-  {projects.map((project) => <ProjectsItem {...project} />)}
+<div class='flex flex-col gap-y-16'>
+  {PROJECTS.map((project) => <ProjectsItem {...project} />)}
 </div>
