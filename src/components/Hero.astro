@@ -1,18 +1,35 @@
 ---
-
+import SocialPill from '@components/SocialPill.astro'
+import MailIcon from '@icons/MailIcon.astro'
+import LinkedInIcon from '@icons/LinkedInIcon.astro'
 ---
 
 <div class='w-auto grid grid-cols-[2fr_1fr] gap-12'>
   <div class=''>
     <h1 class='mb-4 text-6xl font-bold'>Bismark Arroyo</h1>
     <h2 class='mb-8 text-4xl'>Web Developer</h2>
-    <p class='text-xl mt-4 text-pretty'>
-      <span class='text-green/80 dark:text-green'>+3 years of experience </span>
-      specializing in JavaScript, React, and Next.js. As a self-taught professional,
-      I am passionate about technology and continuous learning. I focus on building
-      dynamic, scalable, and user-friendly web applications to help people and businesses
-      succeed.
+    <p
+      class='mt-6 text-xl text-gray-800 dark:text-gray-300 [&>strong]:text-green-700 [&>strong]:font-semibold'
+    >
+      +3 years of experience <strong
+        >specializing in JavaScript, React, and Next.js.</strong
+      > As a self-taught professional, I am passionate about technology and continuous
+      learning. <strong
+        >I focus on building dynamic, scalable, and user-friendly web
+        applications</strong
+      >
+      to help people and businesses succeed.
     </p>
+    <nav class='flex flex-wrap gap-4 mt-8'>
+      <SocialPill href='mailto:bis.arroyo@gmail.com'>
+        <MailIcon class='size-4' />
+        Contáctame
+      </SocialPill>
+      <SocialPill href='https://www.linkedin.com/in/bisarroyo/'>
+        <LinkedInIcon class='size-4' />
+        LinkedIn
+      </SocialPill>
+    </nav>
   </div>
   <div class='glass-bg'></div>
 </div>
