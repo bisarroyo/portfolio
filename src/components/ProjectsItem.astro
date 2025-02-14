@@ -14,6 +14,7 @@ import GithubIcon from '@icons/GithubIcon.astro'
 import LinkIcon from '@icons/LinkIcon.astro'
 import NextJS from '@icons/NextJS.astro'
 import Tailwind from '@icons/Tailwind.astro'
+import Supabase from '@icons/Supabase.astro'
 
 const TAGS: { [key: string]: { name: string; class: string; icon: any } } = {
   NEXT: {
@@ -25,13 +26,18 @@ const TAGS: { [key: string]: { name: string; class: string; icon: any } } = {
     name: 'Tailwind CSS',
     class: 'bg-[#003159] text-white',
     icon: Tailwind
+  },
+  SUPABASE: {
+    name: 'Supabase',
+    class: 'bg-[#00311d] text-white',
+    icon: Supabase
   }
 }
 ---
 
 <div class='w-full grid grid-cols-[1fr_2fr] gap-x-12'>
   <img
-    class='object-cover w-full aspect-[16/9] rounded-lg'
+    class='object-cover w-full aspect-[16/9] rounded-lg object-top'
     src={image}
     alt=''
   />
@@ -51,7 +57,7 @@ const TAGS: { [key: string]: { name: string; class: string; icon: any } } = {
               <li>
                 <span
                   class:list={[
-                    'flex gap-x-2 rounded-full text-xs py-1 px-2',
+                    'flex gap-x-2 rounded-full text-xs py-1 px-2 border border-slate-600',
                     TAGS[tag].class
                   ]}
                 >
