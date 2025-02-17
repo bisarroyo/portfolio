@@ -2,12 +2,18 @@
 import SocialPill from '@components/SocialPill.astro'
 import MailIcon from '@icons/MailIcon.astro'
 import LinkedInIcon from '@icons/LinkedInIcon.astro'
+
+import Profile from '@components/Profile.astro'
 ---
 
 <div class='w-auto grid lg:grid-cols-[2fr_1fr] gap-12'>
   <div class=''>
+    <div
+      class='glass-bg order-1 max-h-[400px] max-w-[400px] object-contain overflow-hidden mb-4'
+    >
+      <Profile />
+    </div>
     <h1 class='mb-4 text-6xl font-bold'>Bismark Arroyo</h1>
-    <h2 class='mb-8 text-4xl'>Web Developer</h2>
     <p
       class='mt-6 text-xl text-gray-800 dark:text-gray-300 [&>strong]:text-green-500 [&>strong]:font-semibold'
     >
@@ -31,5 +37,4 @@ import LinkedInIcon from '@icons/LinkedInIcon.astro'
       </SocialPill>
     </nav>
   </div>
-  <!-- <div class='glass-bg'></div> -->
 </div>
