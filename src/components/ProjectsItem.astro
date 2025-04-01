@@ -15,6 +15,9 @@ import LinkIcon from '@icons/LinkIcon.astro'
 import NextJS from '@icons/NextJS.astro'
 import Tailwind from '@icons/Tailwind.astro'
 import Supabase from '@icons/Supabase.astro'
+import js from '@icons/JS.astro'
+import css from '@icons/CSS.astro'
+import html from '@icons/HTML.astro'
 
 const TAGS: { [key: string]: { name: string; class: string; icon: any } } = {
   NEXT: {
@@ -31,6 +34,21 @@ const TAGS: { [key: string]: { name: string; class: string; icon: any } } = {
     name: 'Supabase',
     class: 'bg-[#00311d] text-white',
     icon: Supabase
+  },
+  JavaScript: {
+    name: 'JavaScript',
+    class: 'bg-[#f7e018] text-white',
+    icon: js
+  },
+  HTML: {
+    name: 'HTML',
+    class: 'bg-[#e44d26] text-white',
+    icon: html
+  },
+  CSS: {
+    name: 'CSS',
+    class: 'bg-[#264de4] text-white',
+    icon: css
   }
 }
 ---
