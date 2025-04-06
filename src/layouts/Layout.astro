@@ -2,7 +2,8 @@
 import Header from '@components/Header.astro'
 import Footer from '@components/Footer.astro'
 
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import SpeedInsights from '@vercel/speed-insights/astro';
+import Analytics from '@vercel/analytics/astro';
 
 import '@fontsource/poppins'
 
@@ -25,22 +26,23 @@ const { description, title } = Astro.props
     <meta name='generator' content={Astro.generator} />
     <meta name='description' content={description} />
     <title>{title}</title>
+    <Analytics />
   </head>
   <body
     class='bg-gray-50 dark:bg-gray-950
       bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(217,216,255,0.5),rgba(255,255,255,0.9))]
       dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(139,198,119,0.3),rgba(255,255,255,0))]'
-  >
-    <div class='container mx-auto px-6'>
-      <SpeedInsights/>
-      <Header />
-      <slot />
+      >
+      <div class='container mx-auto px-6'>
+        <Header />
+        <slot />
       <Footer />
     </div>
+    <SpeedInsights/>
   </body>
-</html>
-
-<style is:global>
+  </html>
+  
+  <style is:global>
   html,
   body {
     margin: 0;
